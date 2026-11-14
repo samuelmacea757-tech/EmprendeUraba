@@ -1,0 +1,7 @@
+# Impide ejecutar scripts en la carpeta de subidas
+php_flag engine off
+RemoveHandler .php .phtml .php3 .php5
+Options -Indexes -ExecCGI
+<FilesMatch "\.(php|phtml|phar|pl|py|cgi)$">
+  Require all denied
+</FilesMatch>
